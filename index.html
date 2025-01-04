@@ -30,6 +30,137 @@
   <link href="assets/css/main.css" rel="stylesheet">
 
 
+  <style>
+    /* Container */
+    .container123 {
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+      flex-wrap: wrap;
+      height: 100%;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
+    /* Left Section */
+    .left-section {
+      flex: 1;
+      padding: 20px;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: #f9fafc;
+    }
+
+    .name {
+      font-size: 48px;
+      font-weight: 700;
+      color: #2f4f2f;
+    }
+
+    .divider {
+      width: 50%;
+      border: 1px solid #2f4f2f;
+      margin: 10px 0 20px;
+    }
+
+    .title {
+      font-size: 18px;
+      font-weight: 400;
+      color: #555;
+      line-height: 1.5;
+      margin-bottom: 20px;
+      margin-right: 20px;
+      width: 80%;
+    }
+
+    .btn-get-started {
+      color: black;
+      font-weight: 500;
+      background: #edd9d9;
+      padding: 10px 20px;
+      margin-top: 10px;
+      text-decoration: none;
+      display: inline-block;
+      border-radius: 5px;
+      width: fit-content;
+    }
+
+    /* Right Section */
+    .right-section {
+      flex: 0 0 45%;
+      /* Ensures it takes 45% width */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      max-height: 90vh;
+      margin-right: 0;
+      padding-right: 0;
+    }
+
+    .profile-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      right: 0;
+      /* Ensures image covers the container */
+    }
+
+    /* Responsive Design */
+    @media (max-width: 992px) {
+      .container123 {
+        flex-direction: column;
+        height: auto;
+      }
+
+      .left-section,
+      .right-section {
+        flex: 1;
+        width: 100%;
+      }
+
+      .left-section {
+        text-align: center;
+        padding: 30px;
+      }
+
+      .name {
+        font-size: 36px;
+      }
+
+      .title {
+        font-size: 16px;
+      }
+
+      .btn-get-started {
+        margin-top: 15px;
+      }
+
+      .right-section {
+        height: 300px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .name {
+        font-size: 28px;
+      }
+
+      .title {
+        font-size: 14px;
+      }
+
+      .btn-get-started {
+        padding: 8px 16px;
+      }
+
+      .right-section {
+        height: 250px;
+      }
+    }
+  </style>
 </head>
 
 <body class="index-page">
@@ -66,37 +197,22 @@
     </div>
   </header>
 
-  <main class="main">
-    <section id="hero" class="hero section">
+  <div class="container container123">
+    <div class="left-section">
+      <h1 class="name">Ashish Jain</h1>
+      <hr class="divider">
+      <p class="title">
+        I'm a passionate Software Engineer specializing in building dynamic, scalable web applications and services.
+        With experience across the full stack, I craft efficient solutions that meet the needs of both users and
+        businesses.
+      </p>
+      <a href="about.html" class="btn-get-started">Learn More About Me</a>
+    </div>
 
-      <img src="assets/img/bg.png" alt="Background Image" data-aos="fade-in">
-
-      <div class="container text-center" data-aos="zoom-out" data-aos-delay="100">
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <!-- Name with background color and reduced opacity -->
-            <h2 style="color: #0a0d24; padding: 10px 20px; border-radius: 5px;">
-              Ashish Jain</h2>
-            <!-- Description with background color and reduced opacity -->
-            <p>
-              <span style="background-color: rgba(236, 240, 241, 0.5); color: #2c3e50; padding: 2px;">
-                I'm a passionate Software Engineer specializing in building dynamic, scalable web applications and
-                services.
-                With experience across the full stack, I craft efficient solutions that meet the needs of both users and
-                businesses.
-              </span>
-            </p>
-
-            <a href="about.html" class="btn-get-started">Learn More About Me</a>
-          </div>
-        </div>
-      </div>
-
-    </section><!-- /Hero Section -->
-
-
-
-  </main>
+    <div class="right-section">
+      <img src="assets/img/linkedin image.jpg" alt="Ashish Jain" class="profile-image">
+    </div>
+  </div>
 
   <footer id="footer" class="footer light-background">
 
